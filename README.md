@@ -5,7 +5,7 @@ Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperime
 ### Usage
 
 ```
-https://github.com/archisman-panigrahi/surface-RT-screen-rotator
+git clone https://github.com/archisman-panigrahi/surface-RT-screen-rotator
 bash setup.sh
 ```
 
