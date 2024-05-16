@@ -7,6 +7,7 @@ Tested in Surface RT running Raspberry Pi OS.
 
 ```
 git clone https://github.com/archisman-panigrahi/surface-RT-screen-rotator
+cd surface-RT-screen-rotator
 bash setup.sh
 ```
 
