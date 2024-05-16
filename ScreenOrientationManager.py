@@ -108,7 +108,6 @@ class ScreenOrientationManager(Gtk.Window):
                          str(self.display_check.get_active()))
             if label.lower() == "left":
                 self.rotate("l")
-                subprocess.Popen['twofing', '/dev/input/event3']
             elif label.lower() == "normal":
                 self.rotate("n")
             elif label.lower() == "right":
