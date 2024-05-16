@@ -2,6 +2,7 @@
 
 Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperiments)
 
+Tested in Surface RT running Raspberry Pi OS.
 ### Usage
 
 ```
