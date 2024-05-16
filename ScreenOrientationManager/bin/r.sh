@@ -38,7 +38,9 @@ right='0 1 0 -1 0 1 0 0 1'
 # xrandr -o normal
 if [ ! -z "$2" ]
 then
+    xrandr -o right
     xinput set-prop "$2" 'Coordinate Transformation Matrix' $right
+    twofing /dev/input/event3
 fi
 if [ ! -z "$1" ]
 then

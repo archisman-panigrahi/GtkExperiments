@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # created by Ruben Barkow (@rubo77)
@@ -40,10 +41,13 @@ right='0 1 0 -1 0 1 0 0 1'
 # xrandr -o normal
 if [ ! -z "$2" ]
 then
+    xrandr -o left
     xinput set-prop "$2" 'Coordinate Transformation Matrix' $left
+    twofing /dev/input/event3
 fi
 if [ ! -z "$1" ]
 then
+    xrandr -o left
     xinput set-prop "$1" 'Coordinate Transformation Matrix' $left
 fi
 if [ ! -z "$3" ]
