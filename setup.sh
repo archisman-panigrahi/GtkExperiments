@@ -19,7 +19,7 @@ Version=1.0
 Type=Application
 Terminal=false
 Name=Screen Orientation Manager
-Exec=python3 ${current_dir}/surface-RT-screen-rotator/ScreenOrientationManager.py
+Exec=python3 ${current_dir}/ScreenOrientationManager.py
 Icon=screenrotator
 Categories=Utility;
 EOL
