@@ -1,5 +1,5 @@
 ## Screen Rotator for Surface RT running GNU/Linux
-
+![screenshot](Screenshots/screenshot1.png)
 Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperiments)
 
 Tested in Surface RT running Raspberry Pi OS.
