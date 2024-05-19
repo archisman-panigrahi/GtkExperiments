@@ -17,5 +17,6 @@ bash srt-screen-rotation.sh
 ### Credits
 
 - Thanks to @rubo77, for this project builds upon his shell script.
-- Thanks to @theGeekyLad, as this project is a slightly modified version of their python application.S
+- Thanks to @theGeekyLad, as this project is a slightly modified version of their python application.
+- Thanks to @Plippo for creating [twofing](https://github.com/plippo/twofing).
 - The icon is based on GuLinux/ScreenRotator. Thanks to @GuLinux.
