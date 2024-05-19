@@ -20,3 +20,5 @@ Exec=python3 ${current_dir}/ScreenOrientationManager.py
 Icon=screenrotator
 Categories=Utility;
 EOL
+
+chmod +x "$TARGET_FILE"
