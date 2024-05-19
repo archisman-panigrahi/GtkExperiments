@@ -10,7 +10,7 @@ Tested in Surface RT [running Raspberry Pi OS](https://openrt.gitbook.io/open-su
 ### Installation
 
 #### Raspberry Pi OS
-The following installation script installs [twofing](https://github.com/plippo/twofing) for two-finger gestures, and then installs this tool. 
+The following installation script installs [twofing](https://github.com/plippo/twofing) for two-finger gestures, and then installs this tool, and adds it to the **autostart** list. 
 
 ```
 wget https://raw.githubusercontent.com/archisman-panigrahi/surface-RT-screen-rotator/surface-rt/srt-screen-rotation-setup.sh
@@ -28,6 +28,9 @@ yay -S twofing-git
 cd && git clone https://github.com/archisman-panigrahi/surface-RT-screen-rotator
 cd surface-RT-screen-rotator
 bash move-files-around.sh
+```
+For autostart, either use the following command or use the appropriate settings in your desktop interface.
+```
 cp $HOME/.local/share/applications/surface-rt-screen-rotator.desktop $HOME/.config/autostart/
 ```
 
