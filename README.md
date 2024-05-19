@@ -4,8 +4,12 @@ Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperime
 This app integrates twofing to enable two-finger gestures after screen rotation.
 
 Tested in Surface RT [running Raspberry Pi OS](https://openrt.gitbook.io/open-surfacert/surface-rt/linux/root-filesystem/distros/raspberry-pi-os).
+
+**Note**: You need to be on an **Xorg** session for results as unfortunately _Wayland isn't supported_ at the moment.
+
 ### Installation
 
+#### Raspberry Pi OS
 The following installation script installs [twofing](https://github.com/plippo/twofing) for two-finger gestures, and then installs this tool. 
 
 ```
@@ -14,7 +18,17 @@ bash srt-screen-rotation.sh
 ```
 If you don't want to set up twofing, and only want to use this tool, then use the `setup.sh` in this repository instead.
 
-**Note**: You're required to be on an **Xorg** session for results as unfortunately _Wayland isn't supported_ at the moment.
+#### Arch Linux
+
+Run the following commands one by one, and Reboot.
+
+```
+yay -S twofing-git
+cd && git clone https://github.com/archisman-panigrahi/surface-RT-screen-rotator
+cd surface-RT-screen-rotator
+bash move-files-around.sh
+cp $HOME/.local/share/applications/surface-rt-screen-rotator.desktop $HOME/.config/autostart/
+```
 
 ### Credits
 
