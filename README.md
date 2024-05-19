@@ -3,7 +3,7 @@
 Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperiments)
 This app integrates twofing to enable two-finger gestures after screen rotation.
 
-Tested in Surface RT running Raspberry Pi OS.
+Tested in Surface RT [running Raspberry Pi OS](https://openrt.gitbook.io/open-surfacert/surface-rt/linux/root-filesystem/distros/raspberry-pi-os).
 ### Installation
 
 ```
