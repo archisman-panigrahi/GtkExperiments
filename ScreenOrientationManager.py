@@ -27,7 +27,7 @@ class ScreenOrientationManager(Gtk.Window):
         # [1] add screen entry
         self.screen_entry = Gtk.Entry()
         self.screen_entry.set_placeholder_text("e.g. ELAN Touchscreen")
-        if len(devices[1]) is not 0:
+        if len(devices[1]) != 0:
             self.screen_entry.set_text(devices[1])
         self.grid.attach(self.screen_entry, 1, 1, 50, 1)
 
@@ -35,24 +35,24 @@ class ScreenOrientationManager(Gtk.Window):
         self.touchpad_entry = Gtk.Entry()
         self.touchpad_entry.props.margin_top = margin
         self.touchpad_entry.set_placeholder_text("e.g. ELAN Touchpad")
-        if len(devices[0]) is not 0:
+        if len(devices[0]) != 0:
             self.touchpad_entry.set_text(devices[0])
-        self.grid.attach(self.touchpad_entry, 1, 2, 50, 1)
+        #self.grid.attach(self.touchpad_entry, 1, 2, 50, 1)
 
         # [3] add check button
-        self.display_check = Gtk.CheckButton(label="Not a touchscreen?")
+        self.display_check = Gtk.CheckButton(label="Lock touchscreen id")
         #self.display_check.props.margin_top = margin
-        #if len(devices[3]) is not 0:
-            #self.display_check.set_active(bool(devices[3]))
+        if len(devices[3]) != 0:
+            self.display_check.set_active(bool(devices[3]))
         self.display_check.connect("clicked", self.on_check_changed)
-        #self.grid.attach(self.display_check, 1, 3, 1, 1)
+        self.grid.attach(self.display_check, 1, 3, 1, 1)
 
 
         # [4] add display entry
         self.display_entry = Gtk.Entry()
         self.display_entry.props.margin_top = margin
         self.display_entry.set_placeholder_text("e.g. Video Bus")
-        if len(devices[2]) is not 0:
+        if len(devices[2]) != 0:
             self.display_entry.set_text(devices[2])
         #self.grid.attach(self.display_entry, 1, 4, 50, 1)
         self.display_entry.set_sensitive(False)
