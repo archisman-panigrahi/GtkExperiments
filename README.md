@@ -1,14 +1,14 @@
 ## Screen Rotator for Surface RT running GNU/Linux
 ![screenshot](Screenshots/screenshot1.png)
 Based on [theGeekyLad/GtkExperiments](https://github.com/theGeekyLad/GtkExperiments)
+This app integrates twofing to enable two-finger gestures after screen rotation.
 
 Tested in Surface RT running Raspberry Pi OS.
-### Usage
+### Installation
 
 ```
-git clone https://github.com/archisman-panigrahi/surface-RT-screen-rotator
-cd surface-RT-screen-rotator
-bash setup.sh
+wget https://raw.githubusercontent.com/archisman-panigrahi/postinstall-scripts/main/srt-screen-rotation.sh
+bash srt-screen-rotation.sh
 ```
 
 
