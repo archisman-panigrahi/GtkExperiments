@@ -42,7 +42,7 @@ if [ ! -z "$2" ]
 then
     xrandr -o normal
     xinput set-prop "$2" 'Coordinate Transformation Matrix' $normal
-    twofing /dev/input/event3
+    bash ${PWD}/bin/twofing.sh
 fi
 if [ ! -z "$1" ]
 then

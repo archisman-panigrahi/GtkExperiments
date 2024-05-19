@@ -41,11 +41,12 @@ class ScreenOrientationManager(Gtk.Window):
 
         # [3] add check button
         self.display_check = Gtk.CheckButton(label="Not a touchscreen?")
-        self.display_check.props.margin_top = margin
-        if len(devices[3]) is not 0:
-            self.display_check.set_active(bool(devices[3]))
+        #self.display_check.props.margin_top = margin
+        #if len(devices[3]) is not 0:
+            #self.display_check.set_active(bool(devices[3]))
         self.display_check.connect("clicked", self.on_check_changed)
-        self.grid.attach(self.display_check, 1, 3, 1, 1)
+        #self.grid.attach(self.display_check, 1, 3, 1, 1)
+
 
         # [4] add display entry
         self.display_entry = Gtk.Entry()
@@ -53,7 +54,7 @@ class ScreenOrientationManager(Gtk.Window):
         self.display_entry.set_placeholder_text("e.g. Video Bus")
         if len(devices[2]) is not 0:
             self.display_entry.set_text(devices[2])
-        self.grid.attach(self.display_entry, 1, 4, 50, 1)
+        #self.grid.attach(self.display_entry, 1, 4, 50, 1)
         self.display_entry.set_sensitive(False)
 
         # [5] button layout
@@ -73,12 +74,14 @@ class ScreenOrientationManager(Gtk.Window):
         self.help_button_grid.props.margin_top = margin
         self.grid.attach(self.help_button_grid, 1, 7, 1, 1)
         '''
-
+        # Restart Twofing Button
+        restart_twofing = self.create_restart_twofing_button(self.buttons_grid, "Restart Twofing", None)
         # [1] help button
-        help = self.create_help_button(self.buttons_grid, "Help", None)
+        #help = self.create_help_button(self.buttons_grid, "Help", None)
 
         # finally
         self.on_check_changed(self.display_check)
+        proc = subprocess.Popen(['bash', os.path.join(script_dir,'bin/twofing.sh')], stdout=subprocess.PIPE)#.wait()
 
     def create_button(self, grid, label, sibling):
         button = Gtk.Button(label=label)
@@ -91,7 +94,7 @@ class ScreenOrientationManager(Gtk.Window):
             grid.attach_next_to(button, sibling, Gtk.PositionType.RIGHT, 1, 1)
         return button
 
-    def create_help_button(self, grid, label, sibling):
+    def create_restart_twofing_button(self, grid, label, sibling):
         button = Gtk.Button(label=label)
         button.connect("clicked", self.on_click)
         margin = 20
@@ -103,7 +106,11 @@ class ScreenOrientationManager(Gtk.Window):
     def on_click(self, widget):
 
         label = str(widget.get_label())
-        if label.lower() != "help":
+        print(label)
+        if label== "Restart Twofing":
+            proc = subprocess.Popen(['bash', os.path.join(script_dir,'bin/twofing.sh')], stdout=subprocess.PIPE)#.wait()
+            print("done restarting")
+        else:
             self.encache(self.touchpad_entry.get_text(), self.screen_entry.get_text(), self.display_entry.get_text(),
                          str(self.display_check.get_active()))
             if label.lower() == "left":
@@ -114,11 +121,11 @@ class ScreenOrientationManager(Gtk.Window):
                 self.rotate("r")
             elif label.lower() == "invert":
                 self.rotate("i")
-        else:
-            self.create_message_dialog("Manual", "1. Run xinput\n2. Note down your touchscreen and touchpad names\n"
-                                                 "3. If you don't have a touchscreen, check the box\n4. In case of "
-                                                 "#3, run xrandr\n5. In case of #4, note down your display name")
-
+        #else:
+            #self.create_message_dialog("Manual", "1. Run xinput\n2. Note down your touchscreen and touchpad names\n"
+            #                                     "3. If you don't have a touchscreen, check the box\n4. In case of "
+            #                                     "#3, run xrandr\n5. In case of #4, note down your display name")
+        
     def on_check_changed(self, widget):
         if widget.get_active() is True:
             self.screen_entry.set_sensitive(False)
