@@ -14,7 +14,7 @@ The following installation script installs [twofing](https://github.com/plippo/t
 
 ```
 wget https://raw.githubusercontent.com/archisman-panigrahi/surface-RT-screen-rotator/surface-rt/srt-screen-rotation-setup.sh
-bash srt-screen-rotation.sh
+bash srt-screen-rotation-setup.sh
 ```
 And **reboot**.
 If you don't want to set up twofing, and only want to use this tool, then use the `setup.sh` in this repository instead.
