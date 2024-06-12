@@ -34,6 +34,11 @@ For autostart, either use the following command or use the appropriate settings 
 cp $HOME/.local/share/applications/surface-rt-screen-rotator.desktop $HOME/.config/autostart/
 ```
 
+### Different device?
+
+By default, the app uses the touchscreen id for Surface RT, for which the app was originally developed.
+If you are using a different device, you can find the touchscreen id by running the command `xinput list`. Then edit the textbox in the app, and use the touchscreen id.
+
 ### Credits
 
 - Thanks to @rubo77, for this project builds upon his shell script.
