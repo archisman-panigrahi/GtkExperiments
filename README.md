@@ -36,8 +36,8 @@ cp $HOME/.local/share/applications/surface-rt-screen-rotator.desktop $HOME/.conf
 
 ### Different device?
 
-By default, the app uses the touchscreen id for Surface RT, for which the app was originally developed.
-If you are using a different device, you can find the touchscreen id by running the command `xinput list`. Then edit the textbox in the app, and use the touchscreen id.
+By default, the app uses the touchscreen name for Surface RT, for which the app was originally developed.
+If you are using a different device, you can find the touchscreen name by running the command `xinput list`. Then edit the textbox in the app, and enter the appropriate touchscreen name.
 
 ### Credits
 
